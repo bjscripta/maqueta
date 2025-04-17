@@ -35,4 +35,19 @@ public class LibroService {
         return "Producto eliminado";
     }
 
+    public int totalLibros(){
+        return libroRepository.mostrarLibros().size();
+    }
+
+    public Libro buscarLibroPorIsbn(String isbn){
+        return libroRepository.buscarPorIsbn(isbn);
+    }
+
+    public List<Libro> buscarLibrosPorAno(int año){
+        return libroRepository.buscarPorAno(año);
+    }
+    
+    public List<Libro> buscarLibrosPorAutor(String autor){
+        return libroRepository.buscarPorAutor(autor);
+    }
 }
